@@ -2,15 +2,21 @@
   "projects": [
     {
       "id": 1,
-      "title": "Deneme 0",
-      "details": "Lorem Ipsum is simply Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. aaaaaaaaaaaa",
+      "title": "Deneme 1",
+      "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "complete": true
+    },
+    {
+      "id": 11,
+      "title": "Deneme 11",
+      "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "complete": true
     },
     {
       "id": 2,
       "title": "Deneme 2",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "complete": false
+      "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "complete": true
     },
     {
       "id": 3,
@@ -35,6 +41,18 @@
       "details": "fdgdfg dfhfdgh sfdhsh srthsfhg",
       "complete": false,
       "id": 6
+    },
+    {
+      "title": "Deneme 5",
+      "details": "lOREM İPSUM",
+      "complete": false,
+      "id": 12
+    },
+    {
+      "title": "AAA",
+      "details": "aaaa",
+      "complete": false,
+      "id": 13
     }
   ]
 }
