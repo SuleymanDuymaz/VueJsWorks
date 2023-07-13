@@ -35,21 +35,28 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-
+import { ref } from "vue";
 export default {
   setup() {
-    const todo=ref("");
-    const todos=ref([]);
+    const todo = ref("");
+    const todos = ref([]);
 
-    return {todo,todos}
-    
+    function addTodo() {
+      todos.value.push({
+        done: false,
+        content: todo.value,
+        id: Date.now(),
+      });
+      todo.value = "";
+    }
+    function done(todo) {
+      todo.done = !todo.done;
+    }
+
+    return { todo, todos, addTodo, done };
   },
-}
+};
 </script>
-
-
-
 
 <style>
 #app {
@@ -71,5 +78,13 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.cursor {
+  cursor: pointer;
 }
 </style>
