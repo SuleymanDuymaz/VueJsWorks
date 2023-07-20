@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <HelloWorld></HelloWorld>
-    <Navbar class="index"/>
-    <Dashboard/>
+  <v-app>
+    <Navbar class="index" />
+    <Dashboard />
     <Footer />
-  </div>
+  </v-app>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+ 
   import Navbar from '../components/Navbar'
   import Dashboard from '../components/Dashboard.vue'
   import Footer from '../components/Footer.vue'
@@ -16,8 +15,7 @@
   export default {
     name: 'Home',
 
-    components: {
-      HelloWorld,
+    components: { 
       Navbar,
       Dashboard,
       Footer
