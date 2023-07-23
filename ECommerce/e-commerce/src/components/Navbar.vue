@@ -22,7 +22,7 @@
         text-align: center;
       "
     >
-      <h4>E COMMERCE</h4>
+      <h4>E Commerce</h4>
     </div>
 
     <v-spacer></v-spacer>
