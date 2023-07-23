@@ -41,10 +41,15 @@
                   dark
                   class="withoutupercase px-8 mt-10"
                 >
-                More Info
+                More Info 
 
                 </v-btn>
+              </v-col>
+              <v-col cols="12" sm="8">
+                <v-img src="bike.png">
 
+                </v-img>
+             
               </v-col>
              
             </v-row>
