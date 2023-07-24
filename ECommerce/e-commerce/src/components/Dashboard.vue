@@ -144,10 +144,22 @@
             <v-badge color="#3853D8" content="3" class="mr-2"></v-badge>
           </v-toolbar>
         </v-col>
+           <v-col cols="3" class="py-0 pr-0 mt-n3">
+              <v-card flat outlined tile>
+                <v-toolbar flat>
+                  <v-icon color="black" class="mr-2">
+                    mdi-chevron-down
+                  </v-icon>
+                  <v-strong>CATEGORIES</v-strong>
+                  <v-spacer></v-spacer>
+                  <v-icon color="grey" small>mdi-close</v-icon>
+                </v-toolbar>
+                <v-list dense class="mt-n5">
+                  <v-list-item>LAST HERE</v-list-item>
+                </v-list>
+              </v-card>
+           </v-col>
       </v-row>
-      <v-col cols="3" class="py-0 pr-0 mt-n3">
-        <v-card></v-card>
-      </v-col>
     </v-card>
 
   </v-container>
