@@ -154,9 +154,35 @@
                   <v-spacer></v-spacer>
                   <v-icon color="grey" small>mdi-close</v-icon>
                 </v-toolbar>
-                <v-list dense class="mt-n5">
-                  <v-list-item>LAST HERE</v-list-item>
-                </v-list>
+            <v-list dense class="mt-n5">
+             <v-list-item v-for="style in styles" :key="style.title">
+               <v-list-item-content>
+                    <v-list-item-title
+                    v-text="style.title"
+                    class="ml-8"
+                  ></v-list-item-title>
+              </v-list-item-content>
+                <v-list-item-action>
+                  <v-list-item-subtitle
+                    v-text="style.count"
+                  ></v-list-item-subtitle>
+                </v-list-item-action>
+  </v-list-item>
+</v-list>
+
+              </v-card>
+              <v-card flat outlined tile>
+                <v-toolbar flat>
+                  <v-icon color="black" class="mr-2">msi-chevron-down</v-icon>
+                  <stron>PRICE</stron>
+                  <v-spacer></v-spacer>
+                  <v-icon color="grey" small>mdi-close</v-icon>
+                </v-toolbar>
+                <v-toolbar  flat>
+                  <v-text-field placeholder="$50" filled rounded dense class="mx-2"></v-text-field>
+                  <v-text-field placeholder="$1900" filled rounded dense class="mx-2"></v-text-field>
+                </v-toolbar>
+
               </v-card>
            </v-col>
       </v-row>
