@@ -182,12 +182,123 @@
                   <v-text-field placeholder="$50" filled rounded dense class="mx-2"></v-text-field>
                   <v-text-field placeholder="$1900" filled rounded dense class="mx-2"></v-text-field>
                 </v-toolbar>
+                <v-range-slider color="blue" max="40" min="30"></v-range-slider>
 
               </v-card>
+              <v-card flat outlined tile>
+                <v-toolbar flat>
+                  <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+                  <strong>BRAND</strong>
+                  <v-spacer></v-spacer>
+                  <v-icon color="grey" small>mdi-close</v-icon>
+                </v-toolbar>
+                           <v-list dense class="mt-n5">
+              <v-list-item v-for="brand in brands" :key="brand.title">
+                <v-list-item-content>
+                  <v-list-item-title
+                    v-text="brand.title"
+                    class="ml-6"
+                  ></v-list-item-title>
+                </v-list-item-content>
+                <v-list-item-action>
+                  <v-checkbox
+                    color="primary"
+                    v-model="brand.state"
+                  ></v-checkbox>
+                </v-list-item-action>
+              </v-list-item>
+            </v-list>
+           </v-card>
+           <v-card flat outlined tile>
+            <v-toolbar flat>
+              <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+              <stron>COLOR</stron>
+              <v-spacer></v-spacer>
+              <v-icon color="grey" small>mdi-close</v-icon>
+
+            </v-toolbar>
+              <v-chip-group column multiple>
+              <v-chip
+                filter
+                outlined
+                color="black"
+                text-color="black"
+                class="ml-2"
+              ></v-chip>
+              <v-chip filter color="#E6E6E6" text-color="black"></v-chip>
+              <v-chip filter color="#FFB500" text-color="white"></v-chip>
+              <v-chip filter color="#F27229" text-color="white"> </v-chip>
+              <v-chip filter color="#EB3427" text-color="white"> </v-chip>
+              <v-chip filter color="#923FA3" text-color="white"> </v-chip>
+
+              <v-chip filter color="#3A51DF" text-color="white" class="ml-2">
+              </v-chip>
+              <v-chip filter color="#23A7F5" text-color="white"> </v-chip>
+              <v-chip filter color="#5EB524" text-color="white"> </v-chip>
+              <v-chip filter color="#7C5F4D" text-color="white"> </v-chip>
+              <v-chip filter color="black" text-color="white"> </v-chip>
+              <v-chip filter color="lime" text-color="white"> </v-chip>
+            </v-chip-group>
+
+           </v-card>
+            <v-card flat outlined>
+            <v-toolbar flat>
+              <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+              <strong>SIZE</strong>
+              <v-spacer></v-spacer>
+              <v-icon color="grey" small>mdi-close</v-icon>
+            </v-toolbar>
+            <v-chip-group
+              column
+              multiple
+              active-class="blue white--text"
+              class="ml-2"
+            >
+              <v-chip
+                v-for="size in sizes"
+                :key="size"
+                :value="size"
+                class="size"
+              >
+                {{ size }}
+              </v-chip>
+            </v-chip-group>
+          </v-card>
            </v-col>
+          <v-col cols="9" class="mt-n3">
+          <v-row>
+            <v-col
+              cols="12"
+              sm="4"
+              v-for="(clothe, i) in clothes"
+              :key="i"
+              :class="clothe.class"
+            >
+              <v-hover v-slot:default="{ hover }">
+                <v-card height="300" align="center" flat outlined tile>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="black" small dark>{{ clothe.sold }}</v-btn>
+                  </v-card-actions>
+                  <v-img
+                    :src="clothe.image"
+                    width="200"
+                    height="200"
+                    contain
+                  ></v-img>
+                  <v-card-text class="mt-n4">
+                    <strong :class="hover ? 'red--text' : 'black--text'">{{
+                      clothe.title
+                    }}</strong>
+                  </v-card-text>
+                 
+                </v-card>
+              </v-hover>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
     </v-card>
-
   </v-container>
 </template>
 
